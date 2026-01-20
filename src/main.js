@@ -1,7 +1,9 @@
 import './style.css'
+import { registerSW } from 'virtual:pwa-register';
 
 const API_URL = 'http://localhost:3000';
 const app = document.querySelector('#app');
+let deferredPrompt;
 
 // Navigation Helper
 const navigateTo = (url) => {
@@ -19,6 +21,7 @@ function renderHeader() {
         <a href="/" data-link>Home</a>
         <a href="/about" data-link>About</a>
         <a href="/admin" data-link>New Post</a>
+        <button id="install-btn" class="install-btn">Install App</button>
       </nav>
     </header>
   `;
@@ -181,6 +184,9 @@ async function router() {
   if (path === '/admin') {
     document.getElementById('create-post-form').addEventListener('submit', handleCreatePost);
   }
+
+  // Re-initialize Install Button state on navigation
+  initInstallButton();
 }
 
 async function handleCreatePost(e) {
@@ -211,19 +217,48 @@ async function handleCreatePost(e) {
   }
 }
 
+// PWA Install Logic Helper
+function initInstallButton() {
+  const installBtn = document.getElementById('install-btn');
+  if (!installBtn) return;
+
+  if (deferredPrompt) {
+    installBtn.style.display = 'inline-block';
+    installBtn.onclick = async () => {
+      installBtn.style.display = 'none';
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log(`User response to the install prompt: ${outcome}`);
+      deferredPrompt = null;
+    };
+  } else {
+    installBtn.style.display = 'none';
+  }
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
   router();
-});
 
-// PWA Service Worker Registration
-import { registerSW } from 'virtual:pwa-register';
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    initInstallButton();
+    console.log('Capture event');
+  });
+
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null;
+    initInstallButton();
+    console.log('PWA was installed');
+  });
+});
 
 if ('serviceWorker' in navigator) {
   registerSW({
     immediate: true,
     onNeedRefresh() {
-      // Prompt user to refresh
+      // Prompt user to refresh if needed
     },
     onOfflineReady() {
       console.log('App is offline ready');
