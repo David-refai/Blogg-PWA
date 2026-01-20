@@ -23,6 +23,22 @@
       "content": "JavaScript has come a long way since the days of ES5. Features like Arrow Functions, Destructuring, Spread Operator, and Async/Await have made the language more expressive and easier to write. <br><br> Let's dive into some distinct examples of how these features can clean up your codebase.",
       "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&w=800&q=80",
       "date": "2023-11-05"
+    },
+    {
+      "id": "4",
+      "title": "Java Basics for Backend Developers",
+      "excerpt": "A quick and practical intro to Java concepts you actually use in real backend projects.",
+      "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80",
+      "date": "2026-01-20",
+      "content": "<strong>Today I will write about <i>Java</i> and why it is still a top choice for backend development.</strong><br><br><p>Java is stable, fast, and used everywhere in enterprise systems. If you learn it well, you can build REST APIs, microservices, and secure applications.</p><ul><li><strong>OOP</strong>: classes, inheritance, interfaces.</li><li><strong>Collections</strong>: List, Set, Map.</li><li><strong>Spring Boot</strong>: build APIs quickly.</li></ul><p>Try this mini challenge: create a simple <strong>Login + JWT + CRUD</strong> API and deploy it.</p>"
+    },
+    {
+      "id": "5",
+      "title": "CSS Grid: Build Layouts Without Pain",
+      "excerpt": "Learn how to create responsive grids for cards, dashboards, and modern UI sections.",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80",
+      "date": "2026-01-18",
+      "content": "<strong>Let’s talk about <i>CSS Grid</i> — the clean way to build modern layouts.</strong><br><br><p>Grid lets you design rows and columns in a clear and powerful way. Perfect for cards and dashboards.</p><ol><li><strong>grid-template-columns</strong> controls column sizes.</li><li><strong>gap</strong> adds spacing between items.</li><li><strong>minmax()</strong> helps auto-fit cards nicely.</li></ol><p>Tip: use <code>repeat(auto-fit, minmax(220px, 1fr))</code> for responsive card grids.</p>"
     }
   ],
   "comments": [
@@ -53,6 +69,13 @@
       "author": "Dana Scully",
       "text": "Can you do a follow-up on Grid vs Flexbox?",
       "date": "2023-10-30"
+    },
+    {
+      "id": "0b08",
+      "postId": 4,
+      "text": "dededed",
+      "author": "dede",
+      "date": "2026-01-20"
     }
   ]
 }
