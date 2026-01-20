@@ -129,7 +129,7 @@ async function loadHome() {
 async function loadPost(id) {
   try {
     const [postRes, commentsRes] = await Promise.all([
-      // fetch(`${API_URL}/posts/${id}`),
+      fetch(`${API_URL}/posts/${id}`),
       fetch(`${API_URL}/comments?postId=${id}`)
     ]);
 

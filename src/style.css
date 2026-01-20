@@ -14,7 +14,7 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -30,7 +30,7 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #475569;
-}
+} */
 
 
 /* Pulse Animation for Loader */
