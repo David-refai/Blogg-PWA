@@ -1,0 +1,58 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "The Future of Web Development",
+      "excerpt": "Exploring the latest trends in PWA and client-side rendering.",
+      "content": "Web development is evolving at a rapid pace. With the advent of PWAs (Progressive Web Apps), we are seeing a shift towards more native-like experiences on the web. This post explores how Vite and Service Workers are changing the game. <br><br> We can now build applications that work offline, send push notifications, and install directly to the user's home screen, all with standard web technologies.",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      "date": "2023-10-25"
+    },
+    {
+      "id": "2",
+      "title": "Understanding CSS Grid",
+      "excerpt": "A comprehensive guide to mastering modern layouts.",
+      "content": "CSS Grid has revolutionized how we think about layout on the web. Gone are the days of float hacks and clearing elements. With Grid, we can create complex, 2-dimensional layouts with ease. <br><br> In this tutorial, we will walk through the basic concepts of grid-template-columns, grid-template-rows, and grid-area.",
+      "image": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=800&q=80",
+      "date": "2023-10-28"
+    },
+    {
+      "id": "3",
+      "title": "JavaScript ES6+ Features",
+      "excerpt": "Enhance your code with modern JavaScript syntax.",
+      "content": "JavaScript has come a long way since the days of ES5. Features like Arrow Functions, Destructuring, Spread Operator, and Async/Await have made the language more expressive and easier to write. <br><br> Let's dive into some distinct examples of how these features can clean up your codebase.",
+      "image": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&w=800&q=80",
+      "date": "2023-11-05"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": "1",
+      "author": "Alice Eden",
+      "text": "Great article! PWAs really are the future.",
+      "date": "2023-10-26"
+    },
+    {
+      "id": "2",
+      "postId": "1",
+      "author": "Bob Smith",
+      "text": "I'm still struggling with Service Workers personally, but this helps.",
+      "date": "2023-10-27"
+    },
+    {
+      "id": "3",
+      "postId": "2",
+      "author": "Charlie Brown",
+      "text": "CSS Grid is a lifesaver. Flexbox is good too though!",
+      "date": "2023-10-29"
+    },
+    {
+      "id": "4",
+      "postId": "2",
+      "author": "Dana Scully",
+      "text": "Can you do a follow-up on Grid vs Flexbox?",
+      "date": "2023-10-30"
+    }
+  ]
+}

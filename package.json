@@ -1,0 +1,21 @@
+{
+  "name": "blog-pwa",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "json-server --watch db.json --port 3000",
+    "dev:all": "concurrently \"npm run server\" \"npm run dev\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "vite": "^7.2.4",
+    "vite-plugin-pwa": "^1.2.0"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
